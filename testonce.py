@@ -21,9 +21,9 @@ client.connect(BROKER, PORT, 60)
 # InfluxDB Config
 # -----------------------------
 INFLUX_URL = "https://eu-central-1-1.aws.cloud2.influxdata.com/"  # Replace with your InfluxDB URL
-TOKEN = "EHIwyUgnGkMTIbXxHYizFPqHT2lrsKl7C0daukFuXjYjzeX_yY0-2D5SEHCImFmv7zNNCTwyHN_ZvfmWmZPDUw=="  # Replace with your token
-ORG = "cgi"
-BUCKET = "Factory_Data"
+TOKEN = "your token"  # Replace with your token
+ORG = "org name" # Replace with your org name
+BUCKET = "bucket name" # Replace with your bucket name
 
 influx_client = InfluxDBClient(url=INFLUX_URL, token=TOKEN, org=ORG)
 write_api = influx_client.write_api(write_options=SYNCHRONOUS)
@@ -64,3 +64,4 @@ try:
 except KeyboardInterrupt:
     print("Stopped.")
     client.disconnect()
+
