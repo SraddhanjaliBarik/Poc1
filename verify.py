@@ -6,9 +6,9 @@ from influxdb_client.client.write_api import SYNCHRONOUS
 
 # -------- InfluxDB --------
 INFLUX_URL = "https://eu-central-1-1.aws.cloud2.influxdata.com/"  # Replace with your InfluxDB URL
-TOKEN = "EHIwyUgnGkMTIbXxHYizFPqHT2lrsKl7C0daukFuXjYjzeX_yY0-2D5SEHCImFmv7zNNCTwyHN_ZvfmWmZPDUw=="  # Replace with your token
-ORG = "cgi"
-BUCKET = "Factory_Data"
+TOKEN = "Token name here"  # Replace with your token you created in influx db
+ORG = "org name here"  # Replace with your org you created in influx db
+BUCKET = "Bucket name here" # Replace with your bucket you created in influx db
 
 client_influx = InfluxDBClient(url=INFLUX_URL, token=TOKEN, org=ORG)
 write_api = client_influx.write_api(write_options=SYNCHRONOUS)
@@ -69,3 +69,4 @@ mqtt_client.on_connect = on_connect
 mqtt_client.on_message = on_message
 mqtt_client.connect(BROKER, PORT, 60)
 mqtt_client.loop_forever()
+
