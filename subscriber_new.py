@@ -12,9 +12,9 @@ TOPIC = "sensors/#"  # Subscribe to all sensor topics
  
 # InfluxDB details
 INFLUX_URL = " https://eu-central-1-1.aws.cloud2.influxdata.com/ "
-TOKEN = "GwSWdg8UQncF4Tojs-ANSOz8Ja40XJUiVf7f9Wh3SHdjqZ2MpESnH6RU3pNKEltFI7j62w00DhzeFM3lpPK78A=="  # Replace with your token
-ORG = "cgi"
-BUCKET = "Poc_Data"
+TOKEN = "Your token no"  # Replace with your token
+ORG = "org name" # Replace with your org name
+BUCKET = "Bucket name" # Replace with your bucket name
  
 # Setup InfluxDB client
 influx_client = InfluxDBClient(url=INFLUX_URL, token=TOKEN, org=ORG, verify_ssl=False)
@@ -91,4 +91,5 @@ client.on_message = on_message
  
 client.connect(BROKER, PORT, 60)
 client.loop_forever()
+
  
